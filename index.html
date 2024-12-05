@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bugsy Battle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="home-page" class="page active">
+    <h1>Bugsy Battle</h1>
+    <div class="btn-container">
+      <div id="classic-mode-btn" class="btn">Classic Mode</div>
+      <div id="challenge-mode-btn" class="btn">
+        Challenge Mode
+        <img src="bugsy.svg" alt="Bunny Icon" class="bunny-icon">
+      </div>
+    </div>
+  </div>
+
+  <div id="player-form-page" class="page">
+    <h2>Add players</h2>
+    <div class="form-card">
+      <div class="form-header">
+        <label for="player-name">Name:</label>
+        <input type="text" id="player-name" placeholder="Enter player name">
+        <button id="save-player-btn" class="add-btn">Add</button>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="players-section">
+      <ul id="player-list"></ul>
+      <button id="start-game-btn" class="play-btn">Play</button>
+      <button id="back-to-home-form-btn" class="nav-btn">Back to home</button>
+    </div>
+  </div>
+
+  <div id="game-page" class="page">
+    <h2>Player life points</h2>
+    <ul id="game-player-list"></ul>
+    <div class="game-buttons">
+      <button id="restart-btn" class="nav-btn">Restart</button>
+      <button id="back-to-home-btn" class="nav-btn">Back to home</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div id="popup-content">
+      <p id="popup-message"></p>
+    </div>
+  </div>
+
+  <div id="alert-popup" class="popup">
+    <div id="alert-popup-content">
+      <p id="alert-popup-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

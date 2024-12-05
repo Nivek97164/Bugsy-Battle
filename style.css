@@ -1,0 +1,270 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1F242E;
+  color: white;
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #1F242E;
+}
+
+h1 {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 1rem;
+}
+
+button, .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.1);
+}
+
+#classic-mode-btn, .btn {
+  background-color: white;
+  color: #0062FF;
+  width: 300px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#classic-mode-btn:hover, .btn:hover {
+  background-color: #0062FF;
+  color: white;
+}
+
+#challenge-mode-btn {
+  position: relative;
+  background-color: white;
+  color: #FF1D1D;
+  width: 300px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#challenge-mode-btn:hover {
+  background-color: #FF1D1D;
+  color: white;
+}
+
+#challenge-mode-btn .bunny-icon {
+  position: absolute;
+  right: -40px;
+  top: -20px;
+  width: 80px;
+  height: auto;
+  pointer-events: none;
+}
+
+.btn-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  background-color: white;
+  color: #1F242E;
+  margin: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-btn:hover {
+  background-color: #1F242E;
+  color: white;
+}
+
+.form-card {
+  background-color: white;
+  color: #1F242E;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #0062FF;
+  width: 80%;
+  max-width: 400px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.divider {
+  width: 80%;
+  height: 2px;
+  background-color: white;
+  margin: 1.5rem auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.players-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#game-player-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.game-player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid transparent;
+  background-color: #1F242E;
+  color: white;
+  border-radius: 5px;
+}
+
+.game-player-item button {
+  background-color: #0062FF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.game-player-item button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #1F242E;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
+
+.popup.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn, #classic-mode-btn, #challenge-mode-btn {
+    width: 80%;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .form-card {
+    width: 90%;
+  }
+
+  .game-player-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .btn, #classic-mode-btn, #challenge-mode-btn {
+    width: 90%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .game-player-item {
+    padding: 5px;
+  }
+
+  .form-card {
+    padding: 15px;
+  }
+}
