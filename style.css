@@ -46,7 +46,8 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1);
+  color: #555;
 }
 
 #classic-mode-btn, .btn {
@@ -236,7 +237,7 @@ button:hover, .btn:hover {
   }
 
   .form-card {
-    width: 90%;
+    width: 80%;
   }
 
   .game-player-item {
@@ -266,5 +267,6 @@ button:hover, .btn:hover {
 
   .form-card {
     padding: 15px;
+    width: 80%;
   }
 }
