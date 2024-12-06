@@ -96,7 +96,7 @@ button:hover, .btn:hover {
   position: absolute;
   right: -40px;
   top: -20px;
-  width: 80px;
+  width: 100px;
   height: auto;
   pointer-events: none;
 }
